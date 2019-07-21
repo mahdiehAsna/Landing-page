@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="styles/style.css">
+        <title></title>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="first-page">
+                <nav>
+                    <div class="brand">
+                        <h2>Landing</h2>
+                    </div>
+                    <div class="navbar">
+                        <ul>
+                            <a href="#" class="navlink">Work</a>
+                            <a href="#" class="navlink">Features</a>
+                            <a href="#" class="navlink">Blog</a>
+                            <a href="#" class="navlink">Contact us</a>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <section id="first-page-section">
+                    <h1>Lorem Ipsum</h1>
+                    <p id="first-page-p">Lorem ipsum dolor sit amet, est an assum perpetua, mundi vituperatoribus eam et, unum eros fierent vel ne.
+                         Sensibus electram cu mel. Option oporteat percipitur an sed. </p>
+                    <button class="mybutton">View Our Projects</button>
+                </section>
+            </div>
+
+            <div id="second-page">
+                <div id="second-page-up">
+                    <div class="second-page-content">                
+                        <h2>Lorem ipsum dolor sit amet</h2><br>
+                        <p>Lorem ipsum dolor sit amet, est an assum perpetua, mundi vituperatoribus eam et, unum eros fierent vel ne.
+                            Sensibus electram cu mel.</p>
+                        <button class="mybutton">View Our Projects</button>
+                    </div>       
+
+                    <div class="second-page-img">
+                       
+                    </div>
+                </div>
+                <div id="second-page-bottom">
+                    <h3>Lorem Ipsum dolor sit amet</h3><br>
+                    <p>Lorem ipsum dolor sit amet, est an assum perpetua, mundi vituperatoribus eam et, unum eros fierent vel ne.
+                        Sensibus electram cu mel.</p>
+                </div>
+            </div>
+
+            <div id="third-page">
+                <div class="third-page-box" id="thth" onclick="deleteCard(this)" onmouseover="rotate45(this)" onmouseout="rotateBack(this)">
+                    
+                        <img class="third-page-icon" src="assets/peace_of_mind.png">
+                    <h4>Peace of mind</h4>
+                    <p>Lorem ipsum dolor sit amet, est an assum perpetua, mundi vituperatoribus eam et,
+                    unum eros fierent vel ne.</p>
+                
+                </div>
+
+                <div class="third-page-box" onclick="deleteCard(this)" onmouseover="rotate45(this)" onmouseout="rotateBack(this)">
+                        <img class="third-page-icon" src="assets/peace_of_mind.png">
+                        <h4>Peace of mind</h4>
+                        <p>Lorem ipsum dolor sit amet, est an assum perpetua, mundi vituperatoribus eam et,
+                        unum eros fierent vel ne.</p>
+                    </div>
+
+                <div class="third-page-box" onclick="deleteCard(this)" onmouseover="rotate45(this)" onmouseout="rotateBack(this)">
+                        <img class="third-page-icon" src="assets/peace_of_mind.png">
+                            <h4>Peace of mind</h4>
+                            <p>Lorem ipsum dolor sit amet, est an assum perpetua, mundi vituperatoribus eam et,
+                            unum eros fierent vel ne.</p>
+                </div>
+
+                <div class="third-page-box" onclick="deleteCard(this)" onmouseover="rotate45(this)" onmouseout="rotateBack(this)">
+                        <img class="third-page-icon" src="assets/peace_of_mind.png">
+                        <h4>Peace of mind</h4>
+                        <p>Lorem ipsum dolor sit amet, est an assum perpetua, mundi vituperatoribus eam et,
+                        unum eros fierent vel ne.</p>
+            </div>    
+                
+            <div class="third-page-box" onclick="deleteCard(this)" onmouseover="rotate45(this)" onmouseout="rotateBack(this)">
+                    <img class="third-page-icon" src="assets/peace_of_mind.png">
+                    <h4>Peace of mind</h4>
+                    <p>Lorem ipsum dolor sit amet, est an assum perpetua, mundi vituperatoribus eam et,
+                    unum eros fierent vel ne.</p>
+                </div>
+
+                <div class="third-page-box" onclick="deleteCard(this)" onmouseover="rotate45(this)" onmouseout="rotateBack(this)">
+                        <img class="third-page-icon" src="assets/peace_of_mind.png">
+                        <h4>Peace of mind</h4>
+                        <p>Lorem ipsum dolor sit amet, est an assum perpetua, mundi vituperatoribus eam et,
+                        unum eros fierent vel ne.</p>
+                    </div>
+
+            </div>
+            <hr>
+            <button onclick="addCard()">add card</button>
+            <button onclick="resetCards()">reset card</button>
+            <div id="fourth-page">
+                <div id="fourth-page-video">
+                <video>
+                    <source src="assets/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                    </video>
+                </div>
+
+            </div>
+
+            <div id="fifth-page">
+                <div id="fifth-page-up">
+                    <div class="fifth-page-content">  
+                            <form class="modal-content" action="#">
+                                  <h2>Sign Up</h2><br>
+                                  <hr>
+                                  
+                                  <input type="text" placeholder="Email" name="email" required>
+                                    <hr>
+                                  <input type="password" placeholder="Password" name="psw" required>
+                                    <hr>
+                                  <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                            <button class="mybutton">Submit</button>
+                            </form>
+                    </div>       
+    
+                    <div class="fifth-page-img">
+                           
+                    </div>
+                </div>
+                    <div id="fifth-page-bottom">
+                        <footer>
+                            Copy Right 2017. All Rights Reserved.
+                        </footer>
+                    </div>
+            </div>
+        </div>
+
+        <script>
+            
+            var div = document.querySelectorAll("div.third-page-box");
+            var deletedOnes;            
+            var div2;
+            function resetCards(){
+
+                let i = 0;
+                for(i = 0; i < div.length; i++)
+                {
+                    document.getElementById("third-page").append(div[i]);
+                }
+
+            }
+
+            function rotate45(div1){
+                div1.style = "transform: rotate(45deg);"
+            }
+
+            function rotateBack(div1){
+                div1.style = "transform: none;"
+            }
+
+            function deleteCard(div1){
+                div1.remove();
+                div2 = div1;
+            }
+
+
+            function addCard(){
+
+                document.getElementById("third-page").appendChild(div2);
+
+            }
+
+
+            </script>
+    </body>
+</html>
