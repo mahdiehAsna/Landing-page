@@ -1,0 +1,12 @@
+
+@mixin page-base{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+@mixin center-items{
+    align-items: center;
+    text-align: center;
+}

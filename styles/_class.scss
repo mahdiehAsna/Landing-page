@@ -1,0 +1,201 @@
+@import 'variables';
+@import 'mixins';
+
+
+h1{
+    font-size: $h1-font-size;
+    color: $white-color;
+    text-align: center;
+}
+
+#first-page{
+    background-image: $first-page-img;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 150px;
+    align-items: center;
+    font-size: $general-font-size;
+
+    .brand{
+        color: $white-color;
+        flex-basis: 50%;
+    }
+
+    ul{
+        text-decoration: none;
+        a{
+            text-decoration: none;
+            padding: 0.4rem;
+            color: $white-color;
+        }
+    }
+}
+
+#first-page-section{
+    display: flex;
+    padding-top: 5rem;
+    flex-direction: column;
+    @include center-items;
+}
+
+#first-page-p{
+    font-size: $general-font-size;
+    color: $white-color;
+    text-align: center;
+    padding-right: 12rem;
+    padding-left: 12rem;
+}
+
+.mybutton{
+    margin-top: 2rem;
+    width: 300px;
+    line-height: 60px;
+    text-align: center;
+    font-size: $button-font-size;
+    background-color: $blue-color;
+    color: $white-color;
+    text-shadow: 2px 2px $black-color;
+    border-radius: 30px;
+    border: 1px solid $blue-color;
+}
+
+#second-page{
+    @include page-base;
+    width: 100%;
+}
+
+.second-page-up{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.second-page-content{
+    display: flex;
+    flex-flow: column;
+    flex-basis: 50%;
+    @include center-items;
+    padding-top: 10rem;
+    font-size: $general-font-size;
+}
+
+.second-page-img{
+    background-image: $second-page-img;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    flex-basis: 50%;
+}
+
+#second-page-bottom{
+    @include center-items;
+    font-size: $general-font-size;
+    margin-left: 9rem;
+    margin-right: 9rem;
+    margin-top: 2.5rem;
+}
+
+#third-page{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.third-page-box{
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+    width: 30%;
+    border: 1px solid $border-gray;
+    border-radius: 1%;
+    text-align: center;
+    justify-content: space-evenly;
+    font-size: $box-font-size;
+
+    p{
+        color: $box-gray;
+        margin-right: 3rem;
+        margin-left: 3rem;
+    }
+    
+}
+
+
+
+.third-page-icon{
+    background-repeat: no-repeat;
+    justify-content: flex-start;
+    align-self: center;
+    width: 30%;
+    height: auto;
+}
+
+
+#fourth-page{
+   
+    display: flex;
+    flex-flow: column;
+    #fourth-page-video{
+        
+        flex-basis: 80%;
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+
+#fifth-page{
+    @include page-base;
+    width: auto;
+}
+
+#fifth-page-up{
+    @extend .second-page-up;
+}
+
+.fifth-page-content{
+    display: flex;
+    flex-flow: column;
+    flex-basis: 50%;
+   // align-items: inherit;
+    //text-align: center;
+    @include center-items;
+    padding-top: 5rem;
+    font-size: $general-font-size;
+}
+
+.fifth-page-img{
+    @extend .second-page-img;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    margin: 1rem;
+    background: $input-color;
+  }
+
+#fifth-page-bottom{
+    color: $footer-color;
+    background-color: $blue-color;
+    @include center-items;
+    font-size: $general-font-size;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
